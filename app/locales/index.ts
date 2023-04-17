@@ -38,29 +38,30 @@ function setItem(key: string, value: string) {
 }
 
 function getLanguage() {
-  try {
-    return navigator.language.toLowerCase();
-  } catch {
-    return "cn";
-  }
+  // try {
+  //   return navigator.language.toLowerCase();
+  // } catch {
+  //   return "cn";
+  // }
+  return "cn";
 }
 
 export function getLang(): Lang {
-  const savedLang = getItem(LANG_KEY);
+  // const savedLang = getItem(LANG_KEY);
 
-  if (AllLangs.includes((savedLang ?? "") as Lang)) {
-    return savedLang as Lang;
-  }
+  // if (AllLangs.includes((savedLang ?? "") as Lang)) {
+  //   return savedLang as Lang;
+  // }
 
-  const lang = getLanguage();
+  // const lang = getLanguage();
 
-  for (const option of AllLangs) {
-    if (lang.includes(option)) {
-      return option;
-    }
-  }
+  // for (const option of AllLangs) {
+  //   if (lang.includes(option)) {
+  //     return option;
+  //   }
+  // }
 
-  return "en";
+  return "cn";
 }
 
 export function changeLang(lang: Lang) {
